@@ -1,0 +1,33 @@
+/* Estilos para la tabla */
+.THIS .cMapComponent {
+    overflow-x: auto;
+}
+.THIS .table-container {
+    max-height: 300px; /* Ajusta la altura máxima deseada */
+    overflow-y: auto;
+}
+.THIS .table-wrapper {
+    display: inline-block;
+}
+.cMapComponent {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para las celdas del encabezado */
+.cMapComponent th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Estilos para las celdas del cuerpo */
+.cMapComponent td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Estilos para la fila de total */
+.cMapComponent .total-row {
+    font-weight: bold;
+}

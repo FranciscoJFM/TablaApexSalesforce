@@ -1,0 +1,46 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-17-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" access="global" controller="MapExample">
+    <aura:attribute name="empleadosMap" type="Map" description="Map of empleados"/>
+    <aura:attribute name="totalSalario" type="Decimal" />
+    <aura:attribute name="totalGanancias" type="Decimal" />
+    <aura:attribute name="totalNeto" type="Decimal" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <div class="table-container">
+        <div class="table-wrapper">
+    <table class="cMapComponent">
+        <thead>
+            <tr>
+                <th>Empleado</th>
+                <th>Salario</th>
+                <th>Ganancias</th>
+                <th>TotalNeto</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.empleadosMap}" var="item">
+                <tr>
+                    <td>{!item.Empleado}</td>
+                    <td>{!item.Salario}</td>
+                    <td>{!item.Ganancias}</td>
+                    <td><strong>{!item.TotalNeto}</strong></td>
+                </tr>
+            </aura:iteration>
+            <tr>
+                <th>Total:</th>
+                <th>{!v.totalSalario}</th>
+                <th>{!v.totalGanancias}</th>
+                <th>{!v.totalNeto}</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+</aura:component>
